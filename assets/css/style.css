@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---------------- NAV TRÊN CÙNG ---------------- */
+.header__nav {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 40px;
+    height: 70px;
+    position: relative;
+}
+
+.header__left,
+.header__right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header__contact,
+.header__Retailers {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__iconContactUs,
+.header__iconLocal,
+.header__arrow {
+    width: 16px;
+    height: 16px;
+}
+
+.dropdown__menu {
+    display: none;
+    position: absolute;
+    top: 28px;
+    left: 0;
+    width: 180px;
+    background: linear-gradient(to bottom, #fff, #bbb);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    z-index: 10;
+}
+
+.dropdown__menu li {
+    padding: 10px 16px;
+    border-left: 2px solid transparent;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.dropdown__menu li:hover {
+    background: #eee;
+    border-left: 2px solid red;
+}
+
+.dropdown__menu a {
+    color: #000;
+}
+
+.dropdown.open .dropdown__menu {
+    display: block;
+}
+
+.dropdown.open .header__arrow {
+    transform: rotate(90deg);
+}
+
+/* ---------------- LOGO GIỮA ---------------- */
+.header__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header__logo {
+    height: 40px;
+}
+
+/* ---------------- NAV DƯỚI ---------------- */
+.nav__bottom {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    gap: 60px;
+    padding: 12px 0;
+    position: relative;
+}
+
+.nav-label {
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.nav-arrow {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown.open .nav-arrow {
+    transform: rotate(90deg);
+}
+
+/* ---------------- DROPDOWN MENU CHUNG ---------------- */
+.nav-item1,
+.nav-item2,
+.nav-item3 {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* ---------------- MENU "CÁC DÒNG XE" DROPDOWN ---------------- */
+/* --- MENU DROPDOWN "CÁC DÒNG XE" với hiệu ứng slide --- */
+.product-menu {
+    position: absolute;
+    top: 200%;
+    left: 270%;
+    transform: translateX(-50%);
+    width: 100vw;
+    background: #fff;
+    overflow: hidden;
+    height: 0;
+    padding: 0;
+    transition: max-height 0.4s ease, padding 1.4s ease;
+    z-index: 20;
+}
+
+
+.nav-item1.open .product-menu,
+.nav-item2.open .product-menu,
+.nav-item3.open .product-menu{
+    height: 300px; /* chiều cao đủ chứa nội dung */
+    padding: 32px 0;
+}
+
+.product-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-list li {
+    text-align: center;
+}
+
+.product-list img {
+    width: 180px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+.product__card {
+    font-size: 1.6rem;
+    color: #EC3935;
+    font-weight: 500;
+}
+
+/* phụ tùng  */
+
+.support{
+    /* display: flex; */
+    left: 65%;
+}
+/* Container 2 cột cho menu dịch vụ */
+.product-container-v1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    gap: 40px;
+}
+
+/* Cột trái: danh sách dịch vụ */
+.support-card {
+    display: flex;
+    align-items: center;
+}
+
+.support-card .product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.support-card .product__card ,.support-card1 .product__card  {
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* Cột phải: ảnh + overlay */
+.support-image {
+    position: relative;
+    width: 350px;
+    height: 242px;
+}
+
+.support-img {
+    width: 350px;
+    height: 242px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+.support-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+
+.support-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.support-btn {
+    background-color: red;
+    color: white;
+    padding: 8px 16px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+}
+.support2{
+    left: -110px;
+}
+.product-container-v2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    gap: 70px;
+}
+.support-card1{
+    display: flex;
+    
+}

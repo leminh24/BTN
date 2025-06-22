@@ -7,12 +7,162 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- reset.css  -->
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
     <!-- style.css  -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>hẹ hẹ</h1>
+    <header class="header">
+        <nav class="nav">
+            <div class="header__nav">
+                <!-- Bên trái -->
+                <div class="header__left">
+                    <div class="header__contact dropdown">
+                        <img src="./assets/image/icon/contact_us.png" alt="" class="header__iconContactUs">
+                        <span class="header__ContactUs">Contact us</span>
+                        <img src="./assets/image/icon/arrow.png" alt="" class="header__arrow">
+                        <ul class="dropdown__menu">
+                            <li><a href="!#">Điểm bán hàng</a></li>
+                            <li><a href="!#">Điểm hỗ trợ</a></li>
+                            <li><a href="!#">Customer Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="header__Retailers">
+                        <img src="./assets/image/icon/local.png" alt="" class="header__iconLocal">
+                        <span class="header__local">Retailers</span>
+                    </div>
+                </div>
+
+                <!-- Logo ở giữa -->
+                <div class="header__center">
+                    <img src="./assets/image/logo/MotoGuzziWhite.png" alt="" class="header__logo">
+                </div>
+
+                <!-- Bên phải để giữ cân bằng -->
+                <div class="header__right"></div>
+            </div>
+            <div class="nav__bottom">
+                <div class="nav-item1 listing dropdown">
+                    <span class="nav-label">Các dòng xe</span>
+                    <img src="./assets/image/icon/arrow_black.png" alt="" class="nav-arrow">
+                    <!-- Dropdown -->
+                    <div class="dropdown__menu product-menu">
+                        <div class="product-container">
+                            <ul class="product-list">
+                                <li>
+                                    <a class="product" href="#">
+                                        <img src="./assets/image/product/V100_Mandello.avif" alt="" class="image-moto">
+                                        <p><span class="product__card">V100 Mandello</span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="product" href="#">
+                                        <img src="./assets/image/product/V85_TT.avif" alt="" class="image-moto">
+                                        <p><span class="product__card">V85 TT</span></p>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="product" href="#">
+                                        <img src="./assets/image/product/V7.avif" alt="" class="image-moto">
+                                        <p><span class="product__card">V7</span></p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item2 listing dropdown">
+                    <span class="nav-label">Chăm sóc khách hàng</span>
+                    <img src="./assets/image/icon/arrow_black.png" alt="" class="nav-arrow" />
+                    <div class="dropdown__menu product-menu support">
+                        <div class="product-container-v1">
+                            <div class="support-card">
+                                <ul class="product-list">
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Phụ tùng chính hãng</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Lịch bảo dưỡng định kỳ</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Recall campaign</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="support-image">
+                                <img src="./assets/image/linhting/servizi.avif" alt="" class="support-img" />
+                                <div class="support-overlay">
+                                    <h2 class="support-title">Dịch vụ sau bán hàng</h2>
+                                    <a href="#"><div class="support-btn">KHÁM PHÁ THÊM</div></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-item3 listing dropdown">
+                    <span class="nav-label"> Thế giới Moto Guzzi </span>
+                    <img src="./assets/image/icon/arrow_black.png" alt="" class="nav-arrow" />
+                    <div class="dropdown__menu product-menu support2">
+                        <div class="product-container-v2">
+                            <div class="support-card1">
+                                <ul class="product-list-1">
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Tin tức</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Fast Endurance</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Trải nghiệm Moto Guzzi</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="product" href="#">
+                                            <span class="product__card">Truyền thống</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="support-card1">
+                                    <ul>
+                                        <li>   
+                                            <a class="product" href="#">
+                                                <span class="product__card">The Moto Guzzi Museum</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="product" href="#">
+                                                <span class="product__card">Những chuyến đi</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="product" href="#">
+                                                <span class="product__card">Portraits</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <script src="./main.js"></script>
 </body>
 </html>
